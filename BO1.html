@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            width: 80%;
+            margin: auto; 
+        }
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 10px;
+            align-items: center;
+        }
+        .logo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 10px;
+        }
+        .logo-picture img{
+            width: 8px;
+        }
+        .logo-title{
+            margin-left: 7px;
+            font-weight: bold;
+            font-size: larger;
+            margin-bottom: 20px;
+        }
+        .navigation{
+            display: flex;
+            flex-direction: row;
+        }
+        .navigation-choice{
+            align-items: center;
+            font-weight: bold;
+            margin: 30px;
+            font-size: larger;   
+        }
+        a:link {text-decoration:none;color: black;}    /* 使navigation的页面内跳转链接更好看 */
+        a:visited {text-decoration:none;color: black;} /* 使navigation的页面内跳转链接更好看 */
+        a:hover {text-decoration:none;color: black;}   /* 使navigation的页面内跳转链接更好看 */
+        a:active {text-decoration:none;color: black;}  /* 使navigation的页面内跳转链接更好看 */
+
+
+        a #menu :link {text-decoration:none;color:  rgb(207,160,118);}   /* Menu的特殊颜色 */
+        a.color:visited {text-decoration:none;color:  rgb(207,160,118);} /* Menu的特殊颜色 */
+        a.color:hover {text-decoration:none;color:  rgb(207,160,118);}   /* Menu的特殊颜色 */
+        a.color:active {text-decoration:none;color:  rgb(207,160,118);}  /* Menu的特殊颜色 */
+
+
+        .fixed{
+            position:fixed;
+            top: 0px; 
+            width:100%;
+            background: rgb(255,255,255); 
+            overflow-y:auto;
+            min-height: 60px;
+            line-height: 60px;
+        }
+        .blank0{
+            border-bottom: rgb(234,234,234) solid;
+            border-bottom-width: 1px;
+        }
+        .blank1{
+            margin: 160px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 15px;
+            background-image: url(./images/background.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .container-title{
+            margin-top: 30px;
+            font-size: 2vw;
+            font-weight: bolder;
+            text-align: center;
+        }
+        .container-description{
+            margin: 11px;
+            margin-bottom: 50px;
+            font-style: italic;
+            color: rgb(169,169,174);
+            font-size: 1vw;
+        }
+        .blank2{
+            margin: 45px;
+        }
+        .gallery{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            height: auto;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            margin-bottom: 30px;
+            box-shadow: 20px 20px 20px 20px rgb(239,238,243);
+            padding-bottom: 40px;
+        }
+        .title{
+            font-size: 2vw;
+            font-weight: bolder;
+            text-align: center;
+        }
+        p{
+            font-style: italic;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 1;
+            color: darkgray;
+            font-size: 1vw;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .blank3{
+            margin: 10px;
+        }
+        .line{
+            width: 10%;
+            height: 1px;
+            background-color: rgb(235,235,235);
+        }
+        .blank4{
+            margin: 30px;
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .footer-logo{
+            margin-top: 65px;
+        }
+        .footer-logo-line{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .good-line{
+            width: 45vw;
+            height: 1px;
+            background-color: rgb(235,235,235);
+        }
+        .footer-logo img{
+            width: 70px;
+            height: 70px;
+            padding: 22px;
+            border: solid #F5F5F5 2px;
+            border-radius: 100px;
+            background-color: #fff;
+        }
+        .footer-title{
+            font-size: larger;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+        .footer-main{
+            font-style: italic;
+            color: rgb(190,190,190);
+            margin: -5px;
+        }
+        .footer-line{
+            width: 15%;
+            height: 1px;
+            background-color: rgb(235,235,235);
+            margin: 10px;
+        }
+        .last img{
+            margin: 10px;
+            margin-top: 0mm;
+        }
+    </style>
+</head> 
+<body>
+
+    <!--页头：用fixed固定 --> 
+    <a id="About"></a>
+    <div class="fixed">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-picutre">
+                    <img style="width: 40px;" src="./images/Logo.png">
+                </div>
+                <div class="logo-title">
+                   Cratia
+                </div>
+            </div>
+            <div class="navigation">          
+                <div class="navigation-choice"> <a href="#About">About </a> </div>
+                <div class="navigation-choice"><a href="#Menu" class="color">Menu</a></div>
+                <div class="navigation-choice"><a href="#Gallery">Gallery</a></div>
+                <div class="navigation-choice"> <a href="#contact">Contact</a> </div>
+            </div>
+        </div>
+        <div class="blank0"></div>  <!--空盒子，用来调空白页面--> 
+    </div>
+    
+    <div class="blank1"></div>  <!--空盒子，用来调空白页面--> 
+
+    <div class="container">
+        <a id="Menu"></a>
+        <div class="container-title">MENU</div>
+        <div class="container-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+
+    <div class="blank2"></div>  <!--空盒子，用来调空白页面--> 
+        <div class="all">
+         <div class="gallery">
+                <div class="box">
+                    <img  style="width: 100%;" src="./images/Main Dishes.png">
+                    <br>
+                    <div class="title"><a id="Gallery">MAIN DISHES</a></div>
+                    <div class="blank3"></div>  <!--空盒子，用来调空白页面--> 
+                    <div class="line"></div>    <!--用来弄修饰的短线--> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img  style="width: 100%;" src="./images/Soups.png">
+                    <br>
+                    <div class="title"> SOUPS</div>
+                    <div class="blank3"></div>  <!--空盒子，用来调空白页面--> 
+                    <div class="line"></div>    <!--用来弄修饰的短线--> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img  style="width: 100%;" src="./images/Hamburgers.png">
+                    <br>
+                    <div class="title">HAMBURGERS</div>
+                    <div class="blank3"></div>  <!--空盒子，用来调空白页面--> 
+                    <div class="line"></div>    <!--用来弄修饰的短线--> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>  
+                </div>
+                <div class="box">
+                    <img  style="width: 100%;" src="./images/Desserts.png">
+                    <br>
+                    <div class="title">  DESSERTS</div>
+                    <div class="blank3"></div>  <!--空盒子，用来调空白页面--> 
+                    <div class="line"></div>    <!--用来弄修饰的短线--> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img  style="width: 100%;" src="./images/Barbecue.png">
+                    <br>
+                    <div class="title">BARBECUE</div>
+                    <div class="blank3"></div>  <!--空盒子，用来调空白页面--> 
+                    <div class="line"></div>    <!--用来弄修饰的短线--> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="box">
+                    <img  style="width: 100%;" src="./images/Salads.png">
+                    <div class="title">SALADS</div>
+                    <div class="blank3"></div>  <!--空盒子，用来调空白页面--> 
+                    <div class="line"></div>    <!--用来弄修饰的短线--> 
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+        </div>
+    </div>        
+
+    <div class="blank4"></div>  <!--空盒子，用来调空白页面--> 
+
+    <div class="footer">
+        <!--用flex布局，左边一条线，中间一个logo图案，右边一条线，设置主轴为横轴--> 
+        <div class="footer-logo">
+            <div class="footer-logo-line">
+                <div class="good-line"></div>
+                    <img src="./images/Logo.png" >
+                <div class="good-line"></div>
+            </div>
+        </div>
+
+        <div class="footer-title">
+            <a id="contact">Cratia Restaurant</a>
+        </div>
+        <br>
+        <div class="footer-main">
+            Copyright 2016.All right served by symu
+        </div>
+        <br>
+        <div class="footer-line"></div>   <!--页脚的线--> 
+        <br>
+        <div class="last">
+            <footer-last>
+                <!--三个图标弄了超链接指向--> 
+                <a href="http://www.facebook.com" target="_blank"><img style="width: 30px;"  src="./images/FB.png"></a>
+                <a href="http://www.twitter.com" target="_blank"><img style="width: 30px;"  src="./images/TR.png"></a>
+                <a href="http://www.instagram.com" target="_blank"><img style="width: 30px;"  src="./images/IG.png"></a>
+            </footer-last>
+        </div>
+    </div>
+</body>
+</html>
